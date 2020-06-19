@@ -1,0 +1,25 @@
+/* Decidi deixar as fontes online para manter o arquivo de avaliação bem leve. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+label {
+    margin-bottom: 3px;
+}
+
+input.form-control, .bottom-space {
+    margin-bottom: 15px;
+}
+
+
+#dog-title {
+    font-size: 2em;
+}
+
+#brand-logo {
+    width: 60px !important;
+    height: 60px !important;
+}

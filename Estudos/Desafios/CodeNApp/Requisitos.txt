@@ -1,0 +1,43 @@
+PAINEL DESEMPENHO DE CADA ATENDENTE
+
+
+
+Dashboard
+    * Atualizar indicadores dinamicamente
+    * Moderno e dinâmico
+    * Com gráficos, tabelas, ícones e cores para diferenciar visualmente os indicadores
+    * Indicadores no topo da página:
+        - Número de clientes atendidos no mês (Ex: 32.518)
+        - Valor das vendas no mês (Ex: R$ 74.312,00)
+        - Número de reclamações nos últimos 3 meses (Ex: Janeiro: 32 / Fevereiro: 41 / Março: 28)
+            * Utilizar um gráfico ou tabela talvez seja interessante...
+
+
+Meio de enxergar desempenho de cada atendente
+    * DICA: Uma tabela seria o ideal
+    * Colocar foto do atendente ao lado do nome
+    * Destacar cliente ao clicar em seu nome na lista
+    * Ao clicar no atendente, mostrar lista de clientes em sua responsabilidade
+        - Campos: Código, Nome, Endereço e Telefone
+        * Seria útil definir status aos clientes (concluido, pendente, em espera)
+
+
+Tela para cadastrar um novo cliente
+- Nome, Endereço, Telefone, Data de Nascimento e Sexo
+    * O campo sexo deve conter apenas as opções Masculino/Feminino.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

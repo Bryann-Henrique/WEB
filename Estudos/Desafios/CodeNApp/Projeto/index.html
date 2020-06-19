@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CodeNApp - GESTÃO DE ATENDENTES</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="CodedThemes">
+      <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+      <meta name="author" content="CodedThemes">
+      <!-- Favicon icon -->
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!-- Google font-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+      <!-- themify-icons line icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+      <!-- Notification.css -->
+      <link rel="stylesheet" type="text/css" href="assets/pages/notification/notification.css">
+      <!-- Animate.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/animate.css/css/animate.css">
+      
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bryann.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+  </head>
+
+  <body>
+
+
+    <!-- Armaezena o JSON que alimenta este protótipo -->
+    <div style="display: none" id="data-attendant">
+        [
+        {
+            "matricula": 1,
+            "atendente": "George",
+            "qtd_atendimentos": 9485,
+            "montante_vendas": 515,
+            "qtd_reclamacoes": 12,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 1,
+                    "nome": "Kelly",
+                    "nascimento": "03/01/2002",
+                    "sexo": "masculino",
+                    "telefone": "(931) 911-3784",
+                    "endereco": "281-9354 Quis Road",
+                    "status": 3
+                },
+                {
+                    "codigo": 2,
+                    "nome": "Stella",
+                    "nascimento": "02/24/1995",
+                    "sexo": "masculino",
+                    "telefone": "(701) 765-7143",
+                    "endereco": "393-4064 Ligula Rd.",
+                    "status": 1
+                },
+                {
+                    "codigo": 3,
+                    "nome": "Naomi",
+                    "nascimento": "07/09/1991",
+                    "sexo": "masculino",
+                    "telefone": "(365) 489-7011",
+                    "endereco": "P.O. Box 931, 8137 Tellus St.",
+                    "status": 1
+                }
+            ]
+        },
+        {
+            "matricula": 2,
+            "atendente": "Hector",
+            "qtd_atendimentos": 2089,
+            "montante_vendas": 280,
+            "qtd_reclamacoes": 26,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 4,
+                    "nome": "Shea",
+                    "nascimento": "02/17/1985",
+                    "sexo": "feminino",
+                    "telefone": "(280) 298-6879",
+                    "endereco": "5932 Tristique Street",
+                    "status": 2
+                },
+                {
+                    "codigo": 5,
+                    "nome": "Malachi",
+                    "nascimento": "07/30/1978",
+                    "sexo": "feminino",
+                    "telefone": "(224) 895-8930",
+                    "endereco": "Ap #754-4593 Auctor Avenue",
+                    "status": 1
+                },
+                {
+                    "codigo": 6,
+                    "nome": "Lars",
+                    "nascimento": "01/26/1979",
+                    "sexo": "feminino",
+                    "telefone": "(460) 534-9013",
+                    "endereco": "Ap #377-392 Praesent Road",
+                    "status": 2
+                }
+            ]
+        },
+        {
+            "matricula": 3,
+            "atendente": "Kevin",
+            "qtd_atendimentos": 4609,
+            "montante_vendas": 265,
+            "qtd_reclamacoes": 99,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 7,
+                    "nome": "Eve",
+                    "nascimento": "02/03/1989",
+                    "sexo": "masculino",
+                    "telefone": "(857) 139-3218",
+                    "endereco": "847-5672 Sit Avenue",
+                    "status": 3
+                },
+                {
+                    "codigo": 8,
+                    "nome": "Orson",
+                    "nascimento": "01/05/1976",
+                    "sexo": "feminino",
+                    "telefone": "(364) 853-7255",
+                    "endereco": "Ap #633-8844 Dolor Road",
+                    "status": 2
+                },
+                {
+                    "codigo": 9,
+                    "nome": "Alfreda",
+                    "nascimento": "05/03/1993",
+                    "sexo": "masculino",
+                    "telefone": "(221) 498-1725",
+                    "endereco": "938 Nisl St.",
+                    "status": 3
+                }
+            ]
+        },
+        {
+            "matricula": 4,
+            "atendente": "Demetrius",
+            "qtd_atendimentos": 4387,
+            "montante_vendas": 372,
+            "qtd_reclamacoes": 63,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 10,
+                    "nome": "Danielle",
+                    "nascimento": "07/01/1997",
+                    "sexo": "masculino",
+                    "telefone": "(943) 535-8757",
+                    "endereco": "Ap #733-441 Dolor Road",
+                    "status": 2
+                },
+                {
+                    "codigo": 11,
+                    "nome": "Casey",
+                    "nascimento": "01/23/2001",
+                    "sexo": "masculino",
+                    "telefone": "(845) 994-6198",
+                    "endereco": "1455 Laoreet St.",
+                    "status": 1
+                },
+                {
+                    "codigo": 12,
+                    "nome": "Ina",
+                    "nascimento": "12/24/1998",
+                    "sexo": "feminino",
+                    "telefone": "(158) 722-3191",
+                    "endereco": "P.O. Box 187, 7167 Commodo Rd.",
+                    "status": 1
+                }
+            ]
+        },
+        {
+            "matricula": 5,
+            "atendente": "Ava",
+            "qtd_atendimentos": 1046,
+            "montante_vendas": 129,
+            "qtd_reclamacoes": 29,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 13,
+                    "nome": "Amir",
+                    "nascimento": "11/01/1981",
+                    "sexo": "masculino",
+                    "telefone": "(217) 563-6131",
+                    "endereco": "616-3497 Aliquam Rd.",
+                    "status": 3
+                },
+                {
+                    "codigo": 14,
+                    "nome": "Stephanie",
+                    "nascimento": "10/14/1980",
+                    "sexo": "feminino",
+                    "telefone": "(526) 105-8666",
+                    "endereco": "423-6473 Erat Avenue",
+                    "status": 3
+                },
+                {
+                    "codigo": 15,
+                    "nome": "Barrett",
+                    "nascimento": "12/27/1974",
+                    "sexo": "masculino",
+                    "telefone": "(522) 974-3828",
+                    "endereco": "Ap #997-8797 Auctor Avenue",
+                    "status": 2
+                }
+            ]
+        },
+        {
+            "matricula": 6,
+            "atendente": "Teagan",
+            "qtd_atendimentos": 9775,
+            "montante_vendas": 569,
+            "qtd_reclamacoes": 4,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 16,
+                    "nome": "Stacy",
+                    "nascimento": "10/29/1972",
+                    "sexo": "masculino",
+                    "telefone": "(645) 861-2245",
+                    "endereco": "Ap #521-6073 Turpis St.",
+                    "status": 2
+                },
+                {
+                    "codigo": 17,
+                    "nome": "Kermit",
+                    "nascimento": "05/01/1983",
+                    "sexo": "masculino",
+                    "telefone": "(269) 274-2075",
+                    "endereco": "3837 Proin Ave",
+                    "status": 2
+                },
+                {
+                    "codigo": 18,
+                    "nome": "Grace",
+                    "nascimento": "09/28/1999",
+                    "sexo": "feminino",
+                    "telefone": "(894) 804-5871",
+                    "endereco": "2609 Nulla. St.",
+                    "status": 3
+                }
+            ]
+        },
+        {
+            "matricula": 7,
+            "atendente": "Gabriel",
+            "qtd_atendimentos": 1259,
+            "montante_vendas": 487,
+            "qtd_reclamacoes": 98,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 19,
+                    "nome": "Rae",
+                    "nascimento": "03/08/1996",
+                    "sexo": "masculino",
+                    "telefone": "(718) 966-4895",
+                    "endereco": "Ap #962-3006 Ipsum Av.",
+                    "status": 2
+                },
+                {
+                    "codigo": 20,
+                    "nome": "Adam",
+                    "nascimento": "08/02/1977",
+                    "sexo": "masculino",
+                    "telefone": "(918) 338-1658",
+                    "endereco": "2106 Eros. Ave",
+                    "status": 3
+                },
+                {
+                    "codigo": 21,
+                    "nome": "Deacon",
+                    "nascimento": "08/08/1970",
+                    "sexo": "masculino",
+                    "telefone": "(926) 229-3963",
+                    "endereco": "P.O. Box 210, 6804 Enim, Av.",
+                    "status": 3
+                }
+            ]
+        },
+        {
+            "matricula": 8,
+            "atendente": "Samantha",
+            "qtd_atendimentos": 3775,
+            "montante_vendas": 10,
+            "qtd_reclamacoes": 100,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 22,
+                    "nome": "Griffith",
+                    "nascimento": "12/24/1985",
+                    "sexo": "masculino",
+                    "telefone": "(659) 543-2908",
+                    "endereco": "6895 Natoque Av.",
+                    "status": 1
+                },
+                {
+                    "codigo": 23,
+                    "nome": "Lila",
+                    "nascimento": "06/12/1974",
+                    "sexo": "masculino",
+                    "telefone": "(499) 776-8108",
+                    "endereco": "Ap #625-4803 Pharetra Rd.",
+                    "status": 2
+                },
+                {
+                    "codigo": 24,
+                    "nome": "Thaddeus",
+                    "nascimento": "05/20/1971",
+                    "sexo": "feminino",
+                    "telefone": "(846) 495-5826",
+                    "endereco": "9121 Lobortis, Street",
+                    "status": 1
+                }
+            ]
+        },
+        {
+            "matricula": 9,
+            "atendente": "Craig",
+            "qtd_atendimentos": 9886,
+            "montante_vendas": 436,
+            "qtd_reclamacoes": 4,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 25,
+                    "nome": "Baker",
+                    "nascimento": "04/12/2002",
+                    "sexo": "feminino",
+                    "telefone": "(283) 298-9829",
+                    "endereco": "903-9292 Fusce Road",
+                    "status": 2
+                },
+                {
+                    "codigo": 26,
+                    "nome": "Larissa",
+                    "nascimento": "07/04/1982",
+                    "sexo": "masculino",
+                    "telefone": "(158) 478-4394",
+                    "endereco": "3907 Non, St.",
+                    "status": 2
+                },
+                {
+                    "codigo": 27,
+                    "nome": "Jada",
+                    "nascimento": "11/30/1972",
+                    "sexo": "masculino",
+                    "telefone": "(376) 577-6494",
+                    "endereco": "5533 Turpis Av.",
+                    "status": 3
+                }
+            ]
+        },
+        {
+            "matricula": 10,
+            "atendente": "Quinn",
+            "qtd_atendimentos": 7783,
+            "montante_vendas": 355,
+            "qtd_reclamacoes": 63,
+            "foto": "assets/images/user-support.png",
+            "clientes": [
+                {
+                    "codigo": 28,
+                    "nome": "Richard",
+                    "nascimento": "07/05/1992",
+                    "sexo": "masculino",
+                    "telefone": "(695) 192-8995",
+                    "endereco": "P.O. Box 374, 7227 Molestie Avenue",
+                    "status": 2
+                },
+                {
+                    "codigo": 29,
+                    "nome": "Ginger",
+                    "nascimento": "12/22/1986",
+                    "sexo": "masculino",
+                    "telefone": "(634) 213-9286",
+                    "endereco": "155-6889 Suspendisse Road",
+                    "status": 1
+                },
+                {
+                    "codigo": 30,
+                    "nome": "Daquan",
+                    "nascimento": "07/24/1972",
+                    "sexo": "masculino",
+                    "telefone": "(651) 609-8946",
+                    "endereco": "P.O. Box 500, 462 Purus St.",
+                    "status": 1
+                }
+            ]
+        }
+    ]
+    </div>
+
+
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo d-flex justify-content-between">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="index.html">
+                            <span>CodeNApp</span>
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                            </li>
+
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()">
+                                    <i class="ti-fullscreen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="header-notification">
+                                <a href="#!">
+                                    <i class="ti-bell"></i>
+                                    <span class="badge bg-c-pink"></span>
+                                </a>
+                                <ul class="show-notification">
+                                    <li>
+                                        <h6>Notifications</h6>
+                                        <label class="label label-danger">New</label>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">John Doe</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Joseph William</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Sara Soudein</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="user-profile header-notification">
+                                <a href="#!">
+                                    <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+                                    <li>
+                                        <a href="#!">
+                                            <i class="ti-settings"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-user"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-email"></i> My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-lock"></i> Lock Screen
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-normal-sign-in.html">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="">
+                                <div class="main-menu-header">
+                                    <img class="img-40 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
+                                    <div class="user-details">
+                                        <span>John Doe</span>
+                                        <span id="more-details">Manager<i class="ti-angle-down"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="main-menu-content">
+                                    <ul>
+                                        <li class="more-details">
+                                            <a href="#"><i class="ti-user"></i>View Profile</a>
+                                            <a href="#!"><i class="ti-settings"></i>Settings</a>
+                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pcoded-search">
+                                <span class="searchbar-toggle">  </span>
+                                <div class="pcoded-search-box ">
+                                    <input type="text" placeholder="Search">
+                                    <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="active">
+                                    <a href="index.html">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+
+                                    <div class="page-body">
+                                        <div class="row">
+
+                                            <!-- Card Atendimentos -->
+                                            <div class="col-md-4">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-blue f-w-600">Atendimentos</span>
+                                                        <h4 id="header-qtd-atendimentos">9999</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-blue f-16 icofont icofont-calendar m-r-10"></i>Últimos 30 dias
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Card vendas -->
+                                            <div class="col-md-4">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-ui-home bg-c-pink card1-icon"></i>
+                                                        <span class="text-c-pink f-w-600">Vendas</span>
+                                                        <h4 id="header-montante-vendas">$9999,99</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-pink f-16 icofont icofont-calendar m-r-10"></i>Últimos 30 dias
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- Card Reclamações -->
+                                            <div class="col-md-4" style="clear: right">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-green f-w-600">Reclamações</span>
+                                                        <h4 id="header-qtd-reclamacoes">9999</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-green f-16 icofont icofont-calendar m-r-10"></i>Últimos 30 dias
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <!-- Container da tabela ATENDENTES -->
+                                            <div class="col-md-7">
+                                                <div class="card project-task">
+                                                    <div class="card-header" style="height: 3em">
+                                                        <div class="card-header-left ">
+                                                            <h5>ATENDENTES</h5>
+                                                        </div>
+
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="icofont icofont-simple-left "></i></li>
+                                                                <li><i class="icofont icofont-maximize full-card"></i></li>
+                                                                <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- TABELA DE ATENDENTES -->
+                                                    <div class="card-block p-b-10">
+                                                        <div id="attendant-table-div" class="table-responsive entity-table-div">
+
+                                                            <table id="attendant-table" class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="hide-column">Matrícula</th>
+                                                                        <th>Atendente</th>
+                                                                        <th>Atendimentos</th>
+                                                                        <th>Vendas</th>
+                                                                        <th class="hide-column">Reclamacões</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody id="attendant-table-body">
+                                                                    <!-- Item da lista de atendentes -->
+                                                                </tbody>
+
+                                                            </table>
+
+                                                        </div>
+                                                    </div> <!--Fim tabela -->
+
+                                                </div>
+                                            </div> <!-- Container da tabela -->
+
+
+
+                                            <!-- Container gráficos -->
+                                            <div class="col-md-5 ">
+                                                <div class="card project-taskentity-chart-div">
+                                                    <!-- GRÁFICOS -->
+                                                    <div class="card-block p-b-10">
+                                                        <div class="entity-chart-div">
+
+                                                            <h5>Desempenho</h5>
+                                                            <span>Últimos 3 meses</span>
+
+                                                            <div class="chart-size" id="morris-bar-chart"></div>
+
+                                                        </div>
+                                                    </div> <!--Fim tabela -->
+
+                                                </div>
+                                            </div> <!-- Container dos gráficos -->
+
+
+
+                                            <!-- Container da tabela CLIENTES -->
+                                            <div class="col-md-7">
+                                                <div class="card project-task">
+                                                    <div class="card-header d-flex align-items-center justify-content-between" style="height: 3em">
+                                                        <div class="card-header-left">
+                                                            <h5>CLIENTES</h5>
+                                                        </div>
+
+                                                        <button id="bt-new-client" class="button bt-new-client">
+                                                            NOVO CLIENTE
+                                                        </button>
+
+                                                    </div>
+
+                                                    <!-- TABELA DE CLIENTES -->
+                                                    <div class="card-block p-b-10">
+                                                        <div id="client-table-div" class="table-responsive entity-table-div">
+
+                                                            <table id="client-table" class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Código</th>
+                                                                        <th>Nome</th>
+                                                                        <th>Telefone</th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody id="client-table-body">
+                                                                    <!-- Item da lista de atendentes -->
+                                                                </tbody>
+
+                                                            </table>
+
+                                                        </div>
+                                                    </div> <!--Fim tabela -->
+
+
+                                                </div>
+                                            </div> <!-- Container da tabela -->
+
+
+
+                                            <!-- Container CADASTRAR CLIENTE -->
+                                            <div class="col-md-7">
+                                                <div id="client-card" class="card project-task" style="display: none;">
+                                                    <div class="card-header">
+
+                                                    </div>
+
+
+                                                    <!-- TABELA DE ATENDENTES -->
+                                                    <div class="card-block p-b-10">
+
+                                                        <form id="form-client" name="form-client">
+                                                            <div id="form-client-area">
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                                                    <div class="card-header-left ">
+                                                                        <h5>CADASTRAR CLIENTE</h5>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div id="form-output-msg"></div>
+
+                                                                <!-- Será definido pelo sistema -->
+                                                                <!-- Status será colocado como padrão EM ESPERA (3) -->
+
+                                                                <label for="form-client-name">Nome</label>
+                                                                <input type="text" name="form-client-name" id="form-client-name" class="input-field" maxlength="120" autofocus >
+
+                                                                <label for="form-client-phone">Telefone</label>
+                                                                <input type="tel" pattern="^[0-9-+\s()]*$"" name="form-client-phone" id="form-client-phone" class="input-field" maxlength="20" >
+
+                                                                <label for="form-client-born">Nascimento</label>
+                                                                <input type="date" name="form-client-born" id="form-client-born" class="input-field" min="1900-01-01" max="2020-12-31" >
+
+                                                                <label for="form-client-gender">Sexo</label>
+                                                                <select name="form-client-gender" id="form-client-gender" class="input-field" >
+                                                                    <option value="m">Masculino</option>
+                                                                    <option value="f">Feminino</option>
+                                                                </select>
+
+                                                                <label for="form-client-address">Endereço</label>
+                                                                <input type="text" name="form-client-address" id="form-client-address" class="input-field" maxlength="120" >
+
+
+                                                                <div id="client-controls">
+                                                                    <div>
+                                                                        <input type="button" value="Cancelar" id="bt-cancel-button" class="button bt-cancel-client">
+                                                                        <input type="button" value="Limpar" id="bt-clear-button" class="bt-clear-client">
+                                                                    </div>
+
+                                                                    <input type="button" value="Cadastrar" id="bt-register-button" class="button bt-register-client">
+
+                                                                    <!-- Eu queria mostrar a notificação, mas estou com pouco tempo. Gambiarra! -->
+                                                                    <div class="notifications" style="display:none">
+                                                                        <li>
+                                                                            <button id="btn-notify" class="btn" data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments" ></button>
+                                                                        </li>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </form>
+
+                                                    </div> <!--Fim tabela -->
+
+                                                </div>
+                                            </div> <!-- Container da tabela -->
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="styleSelector">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Warning Section Starts -->
+        <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="assets/js/modernizr/modernizr.js"></script>
+<!-- am chart -->
+<script src="assets/pages/widget/amchart/amcharts.min.js"></script>
+<script src="assets/pages/widget/amchart/serial.min.js"></script>
+<!-- Morris Chart js -->
+<script src="assets/js/raphael/raphael.min.js"></script>
+<script src="assets/js/morris.js/morris.js"></script>
+<!-- Todo js -->
+<script type="text/javascript " src="assets/pages/todo/todo.js "></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/js/bryann.js"></script>
+<script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript " src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/demo-12.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- notification js -->
+<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="assets/pages/notification/notification.js"></script>
+<script>
+var $window = $(window);
+var nav = $('.fixed-button');
+    $window.scroll(function(){
+        if ($window.scrollTop() >= 200) {
+         nav.addClass('active');
+     }
+     else {
+         nav.removeClass('active');
+     }
+ });
+</script>
+</body>
+
+</html>

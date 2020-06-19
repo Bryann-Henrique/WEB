@@ -1,0 +1,42 @@
+Olá,
+
+Primeiramente peço desculpas pelo atraso na entrega. Passei mal no fim de semana e minha segunda-feira foi conturbada.
+Então 90% do trabalho fiz na terça-feira de noite e acabei agora (00h:40).
+
+* Para usar o sistema, basta selecionar um atendente que a lista de clientes aparecerá abaixo.
+
+* Meu arquivo CSS e JS estão intilulados "bryann.css" e "bryann.js", respecivamente.
+
+* Foquei em usar HTML e CSS puro, mas eventualmente usei uma pitada de bootstrap para agilizar meu lado.
+
+* Faltou melhorar um pouco a responsividade e alinhamentos, mas foi por conta do tempo curto.
+
+* Usei um objeto feito a partir de um JSON simulando uma API para alimentar o sistema.
+
+* Fiz tudo, exceto deixar o gráfico interativo, mas com mais 1 dia eu o faria.
+
+
+
+RESPOSTAS:
+
+    CADASTRO DE CLIENTES:
+        Na tela: Botão verde no container de CLIENTES.
+        No código: RegisterClient() 
+        Arquivo: assets/js/bryann.js [linha 195]
+
+    SELEÇÃO DE CLIENTE:
+        No código: SelectLine()
+        Arquivo: assets/js/bryann.js [linha 24]
+
+    GRÁFICO DOS ÚLTIMOS 3 MESES:
+        Na tela: Container DESEMPENHO.
+        Arquivo: assets/js/bryann.js [linha 329]
+
+    LISTA DE CLIENTES DE UM ATENDENTE:
+        Na tela: Container de CLIENTES.
+        No código: LoadClient() 
+        Arquivo: assets/js/bryann.js [linha 120]
+
+
+
+Muito obrigado pela oportunidade!

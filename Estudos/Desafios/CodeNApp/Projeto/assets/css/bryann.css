@@ -1,0 +1,160 @@
+/* Usado para esconder algumas colunas a fim de economizar espaço na tela */
+.hide-column {
+    display: none;
+}
+
+
+.col-md-6 {
+    margin: 0 !important;
+}
+
+
+
+
+
+.table-img-person {
+    width: 50px;
+    height: 53px;
+    border-radius: 50%;
+}
+
+
+.entity-table-div {
+    min-height: 40vh;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+
+.entity-chart-div {
+    min-height: 40vh;
+    height: 40vh;
+}
+
+.chart-size {
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+}
+
+
+
+/* Seleção de linha */
+.select-list-item {
+    background-color: #00aaff4b !important;
+}
+
+.select-list-item:hover {
+    background-color: #00aaff6b !important;
+}
+
+
+/* CADASTRO DE CLIENTE */
+
+#client-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.button {
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 16px;
+
+    transition: 0.5s;
+}
+
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+
+.bt-new-client {
+    background-color: #23c40e;
+    border: 2px solid #23c40e;
+    padding: 3px 10px !important;
+}
+
+
+.bt-register-client {
+    background-color: #23c40e;
+    border: 2px solid #23c40e;
+}
+
+
+.bt-clear-client {
+    background-color: #ffffff;
+    border: 1px solid #b6b6b6;
+    color: #000 !important;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px 16px;
+
+    transition: 0.5s;
+}
+
+.bt-clear-client:hover {
+    background-color: #b6b6b6;
+    color: #ffffff !important;
+    transition: 0.5s;
+}
+
+
+.bt-cancel-client {
+    background-color: #f15e32;
+    border: 2px solid #f15e32;
+}
+
+
+/* Campos do cadastro de cliente */
+#form-client-area {
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 720px) {
+    #form-client-area {
+        width: 100%;
+    }
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    margin-bottom: 1.5em;
+    border: 1px solid #ccc;
+
+    transition: 0.5s;
+}
+
+.input-field:focus {
+    border: 1px solid #7aa3fc;
+    transition: 0.5s;
+}
+
+
+.close-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    color: #707070;
+    font-size: 40px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+  
+.close-button:hover, .close-button:focus {
+    color: #999;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
