@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>010</title>
+        
+        
+        <style>
+            body {background: #000;}
+            
+            #box {
+                background: #fff;
+                width: 30%;
+                height: 45px;
+                
+                margin: 0 auto;
+                margin-top: 30%;
+                padding-top: 10px;
+            }
+            
+            #anima-img {position: fixed;}
+        </style>
+
+        
+        <script type="text/javascript">
+            
+            function Timer() {
+            
+                setInterval(function() {
+                    const larguraDaTela = window.screen.availWidth;
+                    var espaco = 0;
+                    var img = document.getElementById("anima-img");
+                    
+                    
+                    
+                    if(img.src.includes("chara-1.png")) img.src = "_img/chara-2.png";
+                    else if(img.src.includes("chara-2.png")) img.src = "_img/chara-3.png";
+                    else img.src = "_img/chara-1.png";
+                    
+                    if (img.offsetLeft < 800) {
+                        espaco = img.offsetLeft + 5;
+                        img.style = ("left: " + espaco + "px;");
+                    }
+                    else {
+                        espaco = 450;
+                        img.style = ("left: " + espaco + "px;");
+                    }
+                
+                }, 100);
+            
+            }
+        
+        </script>
+        
+    </head>
+    
+    
+    <body onload="Timer()">
+        
+        <div id="box">
+            <img id="anima-img" src="_img/chara-1.png">
+        </div>
+        
+    </body>
+
+</html>

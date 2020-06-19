@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Relógio</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="_css/estilo.css">
+        
+        
+        
+        <script type="text/javascript">
+            
+            function Relogio() {
+                var hora = document.getElementById("hora");
+                
+            
+                setInterval(function() {
+                    var data = new Date();
+                    
+                    hora.innerText = data.getHours() + ":" + data.getMinutes() + ":" + ("0" + data.getSeconds()).slice(-2);
+                }, 100)
+            }
+
+        
+        </script>
+    </head>
+    
+    
+    <body onload="Relogio()"  style="background-image: url(_img/fundo.jpg)">
+        
+        <div id="hora"></div>
+        
+    </body>
+
+</html>

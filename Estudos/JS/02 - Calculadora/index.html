@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Calculadora</title>
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="_css/Estilo.css">
+        
+        <script src="_js/Script.js"></script>
+    </head>
+
+
+    <body>
+        <main>
+
+            <h1 id="titulo">Calculadora</h1>
+
+            <table>
+
+                <tr><td colspan="4" id="rst">0</td></tr>
+                
+                <tr>
+                    <td onclick="RemoveLastChar()" colspan="2"><-</td>
+                    <td onclick="Clear()">C</td>
+                    <td onclick="GetOperator(this.id)" id="div">/</td>
+                </tr>
+
+                <tr>
+                    <td onclick="GetValue(this.id)" id="sete">7</td>
+                    <td onclick="GetValue(this.id)" id="oito">8</td>
+                    <td onclick="GetValue(this.id)" id="nove">9</td>
+                    <td onclick="GetOperator(this.id)" id="mul">*</td>
+                </tr>
+
+                <tr>
+                    <td onclick="GetValue(this.id)" id="quatro">4</td>
+                    <td onclick="GetValue(this.id)" id="cinco">5</td>
+                    <td onclick="GetValue(this.id)" id="seis">6</td>
+                    <td onclick="GetOperator(this.id)" id="sub">-</td>
+                </tr>
+
+                <tr>
+                    
+                    <td onclick="GetValue(this.id)" id="um">1</td>
+                    <td onclick="GetValue(this.id)" id="dois">2</td>
+                    <td onclick="GetValue(this.id)" id="tres">3</td>
+                    <td onclick="GetOperator(this.id)" id="som">+</td>
+                </tr>
+
+                <tr>
+                    <td onclick="GetValue(this.id)" colspan="2" id="zero">0</td>
+                    <td onclick="GetOperator(this.id)" id="ponto">.</td>
+                    <td onclick="Calc()" id="igual">=</td>
+                </tr>
+                
+            </table>
+            
+        </main>
+    </body>
+</html>

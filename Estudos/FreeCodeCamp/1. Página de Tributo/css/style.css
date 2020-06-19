@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#main {
+    width: 100%;
+}
+
+#profile-filter {
+    background-image: url("https://cdn.olhares.pt/client/files/foto/big/863/8637915.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+
+    color: rgb(243, 243, 243);
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#profile-words {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#profile-photo-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    visibility: hidden;
+    animation: init 1s ease-out 0.6s forwards;
+}
+
+#title {
+    visibility: hidden;
+    animation: init 1s ease-out 0.3s forwards;
+}
+
+#profile-words-quote {
+    width: 80%;
+    border-left: 3px solid #fff;
+    padding-left: 10px;
+
+    visibility: hidden;
+    animation: init 1s ease-out 0.9s forwards;
+}
+
+#quote-citation {
+    font-style: italic;
+}
+
+#quote-author {
+    font-weight: bold;
+}
+
+
+
+/* CONTEÚDO */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2em;
+}
+
+
+#img-div {
+    box-shadow: 2px 2px 5px #ccc;
+    margin: 2em 0;
+    max-width: 720px;
+    width: 100%;
+    height: auto;
+}
+
+#image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+#img-caption {
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#tribute-info {
+    max-width: 720px;
+    width: 100%;
+}
+
+#tribute-info li {
+    text-align: justify;
+    list-style-type: none;
+    padding: 0.5em 0;
+}
+
+.tm-li {
+    font-weight: bold;
+}
+
+#tribute {
+    margin-top: 3em;
+    text-align: center;
+}
+
+#tribute-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+
+    transition: 0.2s;
+}
+
+#tribute-link:hover {
+    color: rgb(219, 186, 0);
+    text-shadow: 0 0 rgb(224, 199, 52);
+
+    transition: 0.2s;
+}
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(82, 82, 82);
+    color: whitesmoke;
+    font-size: 0.8em;
+
+    margin-top: 10em;
+    height: 15vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 720px) {
+    #profile {
+        flex-direction: column;
+    }
+    
+    #profile-photo {
+        width: 100%;
+    }
+    
+    #profile-words {
+        width: 100%;
+    }
+
+    #profile-photo-image {
+        animation: init 1s ease-out 0.9s forwards;
+    }
+    
+    #title {
+        animation: init 1s ease-out 0.6s forwards;
+    }
+    
+    #profile-words-quote {
+        margin-top: 20px;
+        padding: 30px;
+        border-left: none;
+        text-align: center;
+
+        animation: init 1s ease-out 0.3s forwards;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #profile-photo-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+
+
+/* ANIMAÇÕES */
+@keyframes init {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}

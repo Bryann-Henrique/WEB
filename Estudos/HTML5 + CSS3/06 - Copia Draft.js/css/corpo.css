@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#corpo {
+    margin: 0 auto;
+    padding: 10px;
+    
+    width: 40%;
+}
+
+#corpo p {
+    margin: 0;
+    margin-bottom: 20px;
+    
+    line-height: 25px;
+}
+
+#corpo p:first-child {
+    margin-top: 25px;
+}
+
+#bt-learn-more {
+    margin-top: 60px;
+    margin-left: calc(50% - 135px);
+    
+    padding: 10px;
+    
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: #843131;
+    color: #fff;
+    
+    font-size: 1.5em;
+}
+
+
+
+
+#rich-text {
+    width: 95%;
+    padding: 20px 15px;
+    border: 1px solid #ddd;
+}
+
+.rich-style-button {
+    font-size: 14px;
+    color: #727272;
+    margin-right: 15px;
+}
+
+.rich-style-button:hover {
+    cursor: pointer;
+}
+
+#rich-controls-1 {
+    padding-bottom: 15px;
+}
+
+
+#rich-controls-2 {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#rich-editor {
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    border: none;
+    
+    font-size: 18px;
+    
+}
+
+
+
+
+/* MOBILE */
+@media screen and (max-width: 1080px) {
+    #corpo {  
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #corpo {  
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

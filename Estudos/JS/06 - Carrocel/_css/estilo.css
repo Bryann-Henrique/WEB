@@ -1,0 +1,26 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#slide {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 70%;
+    height: 60vh;
+    
+    background: #eee;
+}
+
+#img {
+    height: 100%;
+    width: 100%;
+    
+    background-image: url(../_img/001.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    transition: 0.5s;
+}

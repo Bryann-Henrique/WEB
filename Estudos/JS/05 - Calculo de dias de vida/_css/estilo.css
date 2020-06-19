@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    display: flex;
+    justify-content: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+    margin-top: 10%;
+    width: 260px;
+    height: 320px;
+
+    background: #eee;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    
+}
+
+#form h3 {
+    margin: 0;
+    margin-bottom: 1em;
+    
+    font-size: 1.37em;
+    color: #4286f4;
+}
+
+#lbl-nasc {
+    margin: 20px 0 0 0;
+}
+
+#nasc {
+    margin: 10px 0 20px 0;
+
+    font-size: 1.3em;
+}
+
+#botao {
+    height: 40px;
+    outline: none;
+    margin: 10px 0 3px 0;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 6px #376ec6;
+    
+    background: #4286f4;
+    color: #fff;
+    
+    font-size: 2em;
+    
+    transition: 0.0.5s;
+}
+
+#botao:hover {
+    background: #5998ff;
+}
+
+#botao:active {
+    padding-top: 3px;
+    height: 43px;
+    box-shadow: 0 3px #376ec6;
+    margin-bottom: 0;
+}
+
+#rst {
+    margin-top: 40px;
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

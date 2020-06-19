@@ -1,0 +1,154 @@
+body {
+    display: flex;
+}
+
+.espaco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20vh;
+    width: 25vh;
+}
+
+.espaco:nth-child(odd) {
+    border: 1px solid #ccc;
+}
+
+
+/* CRESCIMENTO */
+#load-1 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+
+    background-color: chartreuse;
+    animation: anim-1 2s infinite;
+}
+
+@keyframes anim-1 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        height: 100px;
+        width: 100px;
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* SPINNER */
+#load-2 {
+    height: 80px;
+    width: 80px;
+
+    background-color: white;
+    border: 20px solid #ccc;
+    border-top: 20px solid rgb(255, 0, 0);
+    border-radius: 50%;
+
+
+    animation: anim-2 2s infinite;
+}
+
+@keyframes anim-2 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* ONDA DE CHOQUE */
+#load-3 {
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+    height: 10px;
+    width: 10px;
+
+    animation: anim-3 2s infinite;
+}
+
+@keyframes anim-3 {
+    0% {
+        opacity: 0;
+        height: 10px;
+        width: 10px;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        border: 10px double cornflowerblue;
+        height: 60px;
+        width: 60px;
+
+        transform: scale(1.6);
+    }
+}
+
+
+/* ESFERAS PULANDO */
+.circle {
+    background-color: orangered;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    transform: translateY(15px);
+}
+
+#c-1 {
+    animation: anim-4 0.5s infinite 0s alternate;
+}
+
+#c-2 {
+    animation: anim-4 0.5s infinite 0.2s alternate;
+}
+
+#c-3 {
+    animation: anim-4 0.5s infinite 0.4s alternate;
+}
+
+#c-4 {
+    animation: anim-4 0.5s infinite 0.6s alternate;
+}
+
+@keyframes anim-4 {
+    0% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* ESFERA COM SOMBRA */
+.shadow-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#s-1 {
+    background-color: #000;
+
+    transform: scale(0.8, 0.4);
+
+    animation: anim-5 0.5s infinite 0s alternate;
+}
+
+@keyframes anim-5 {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.8, 0.4);
+    }
+    100% {
+        opacity: 0.4;
+        transform: scale(0.6, 0.2);
+    }
+}

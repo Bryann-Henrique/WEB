@@ -1,0 +1,17 @@
+body {
+    overflow: hidden;
+}
+
+#task-list {
+    list-style-type: none;
+}
+
+.animate-li {
+    animation-name: animate-li;
+    animation-duration: 1s;
+}
+
+@keyframes animate-li {
+    from {transform: translateX(60px)};
+    to {transform: translateY(0)};
+}

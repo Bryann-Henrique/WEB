@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Cadastrar</title>
+        <link rel="stylesheet" href="css\cadastro.css">
+    </head>
+    
+    <body>
+        <div id="div-cadastro">
+        
+            <form action="#" method="GET">
+                <h2>Cadastro</h2>
+
+                <label for="nome">Nome completo:</label>
+                <input type="text" name="nome" class="textField" required>
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" class="textField" required>
+                <br>
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" name="nascimento" required>
+                <br>
+                <label for="sexo">Sexo:</label>
+                <input type="radio" name="sexo" value="homem" checked required>Homem
+                <input type="radio" name="sexo" value="mulher" required>Mulher
+                <br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" class="textField" required>
+                <br>
+                <label for="senhaConfirm">Confirmação de senha:</label>
+                <input type="password" name="senhaConfirm" class="textField" required>
+                <br>
+                <input type="reset" value="Limpar campos" class="bt">
+                <input type="submit" value="Cadastrar" class="bt">
+            
+            </form>
+        </div>
+    </body>
+</html>

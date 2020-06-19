@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background: #2f3135;
+}
+
+main {
+    width: 22%;
+    margin: 5em auto;
+}
+
+#titulo {
+    color: #fff;
+    width: 60%;
+    margin: 0.7em auto;
+}
+
+table {
+    border-spacing: 0.7em;
+    background: #555;
+    width: 100%;
+    padding: 0.5em;
+}
+
+td {
+    background: #ccc;
+    padding: 1em 1.3em;
+    margin: 2em;
+    transition: 0.4s;
+    box-shadow: 2px 2px 10px #000;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+td:hover {
+    background: #aaa;
+    cursor: pointer;
+}
+
+#rst {
+    text-align: right;
+    font-size: 1.7em;
+    padding: 0.6em .5em;
+    user-select: text;
+}
+
+#rst:hover {
+    cursor: text;
+    background: #bbb;    
+}

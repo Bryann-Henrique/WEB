@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Philosopher', sans-serif;
+}
+
+#main {
+	height: 100vh;
+	background-image: url(../_img/fundo.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+nav {
+	padding-top: 20px;
+}
+
+#m-menu {
+	display: none;
+}
+
+#menu {
+	display: flex;
+	flex-direction: row;
+}
+
+#menu li {
+	list-style: none;
+}
+
+#menu a {
+	font-size: 2em;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+}
+
+#menu a:hover {
+	border-bottom: 4px solid #fff;
+	margin-bottom: -4px;
+}
+
+#title {
+	color: rgba(255,255,255,0.9);
+	text-align: right;
+	font-size: 2em;
+	margin-top: calc(100vh/3);
+	margin-right: 20px;
+}
+
+
+
+/* MOBILE */
+@media screen and (max-width: 720px) {
+	nav {
+		padding-top: 0;
+	}
+
+	#menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-bottom: 2px solid #fff;
+	}
+	
+	#menu li {
+		text-align: center;
+	}
+	
+	#menu a {
+		display: inline-block;
+		width: 100vw;
+		padding: 10px 0;
+		line-height: 100%;
+
+		transition: 0.5s;
+	}
+	
+	#menu a:hover {
+		background-color: rgb(0, 0, 0, 0.4);
+		border-bottom: none;
+		margin-bottom: 0;
+
+		transition: 0.5s;
+	}
+
+}
