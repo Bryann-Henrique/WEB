@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <main id="main">
+
+            <!-- TÍTULO -->
+            <div id="title-container">
+                <h1 id="title">Pesquisa freeCodeCamp</h1>
+
+                <p id="description">
+                    Obrigado por ajudar a melhorar nossa plataforma!
+                </p>
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <form id="survey-form">
+
+                <label id="name-label" class="input-label-block" for="name">Nome</label>
+                <input type="text" class="input-control" id="name" required placeholder="Informe sue nome completo.">
+
+                <label id="email-label" class="input-label-block" for="email">E-mail</label>
+                <input type="email" class="input-control" id="email" required placeholder="Informe seu email.">
+
+                <label id="number-label" class="input-label-block" for="number">Idade</label>
+                <input type="number" class="input-control" id="number" min="1" max="150" placeholder="Informe sua idade.">
+
+
+                <!-- Atividade atual -->
+                <label id="dropdown-label" class="input-label-block" for="number">Qual opção descreve melhor sua atividade atual?</label>
+                <select name="" id="dropdown" class="input-control">
+                    <option value="" disabled selected>Seleciona uma opção</option>
+                    <option value="1">Estudante</option>
+                    <option value="2">Estagiário</option>
+                    <option value="3">Empregado</option>
+                    <option value="4">FreeLancer</option>
+                    <option value="5">Desempregado</option>
+                    <option value="6">Prefiro não responder</option>
+                    <option value="7">Outro</option>
+                </select>
+
+
+                <!-- Recomandação -->
+                <span class="input-label-block">Qual a chance de nos recomendar para um amigo?</span>
+
+                <div id="">
+                    <div>
+                        <input type="radio" name="recom" id="recom-nenhuma" value="nenhum">
+                        <label class="input-label" for="recom-nenhuma">Nenhuma</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="recom" id="recom-baixa" value="baixa">
+                        <label class="input-label" for="recom-baixa">Baixa</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="recom" id="recom-media" value="media">
+                        <label class="input-label" for="recom-media">Média</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="recom" id="recom-alta" value="alta">
+                        <label class="input-label" for="recom-alta">Alta</label>
+                    </div>
+                </div>
+
+
+                <!-- Recurso favorito -->
+                <label class="input-label-block" for="dropdown-fav">Qual seu recurso favorito do freeCodeCamp?</label>
+                <select id="dropdown-fav" class="input-control">
+                    <option value="" disabled selected>Seleciona uma opção</option>
+                    <option value="1">Desafios</option>
+                    <option value="2">Projetos</option>
+                    <option value="3">Comunidade</option>
+                    <option value="4">Código aberto</option>
+                </select>
+
+
+                <!-- Melhoria -->
+                <span class="input-label-block">O que você gostaria de ver melhorado?</span>
+
+                <div id="mlr-div">
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-1" value="1">
+                        <label  for="mlr-1">Projetos Front-end</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-2" value="2">
+                        <label for="mlr-2">Projetos Back-end</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-3" value="3">
+                        <label for="mlr-3">Visualização de dados</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-4" value="4">
+                        <label for="mlr-4">Desafios</label>
+                    </div>
+
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-5" value="5">
+                        <label for="mlr-5">Comunidade de código aberto</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-6" value="6">
+                        <label for="mlr-6">Vídeos</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-7" value="7">
+                        <label for="mlr-7">Metups em cidades</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-8" value="8">
+                        <label for="mlr-8">Wiki</label>
+                    </div>
+    
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-9" value="9">
+                        <label for="mlr-9">Fórum</label>
+                    </div>
+
+                    <div class="input-space">
+                        <input type="checkbox" id="mlr-10" value="10">
+                        <label for="mlr-10">Cursos adicionais</label>
+                    </div>
+                </div>
+
+
+                <!-- Comentário -->
+                <label class="input-label-block" for="coment-area">Algum comentário ou sugestão?</label>
+                <textarea name="" id="coment-area" cols="30" rows="10" class="input-control"></textarea>
+
+
+                <!-- Enviar -->
+                <input type="submit" value="Enviar" id="submit" class="input-control">
+
+            </form>
+
+
+        </main>
+
+
+
+
+
+
+        <!-- RODAPÉ -->
+        <footer>
+            © 2020 Bryann Henrique. Todos os direitos reservados.
+        </footer>
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
